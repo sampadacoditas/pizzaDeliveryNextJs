@@ -1,0 +1,106 @@
+.container
+{
+    display: flex;
+    padding: 50px;
+    .left
+    {
+        flex:2;
+        .row
+        {
+            .table
+            {
+                text-align: left;
+                width: 100%;
+            }
+
+        }
+        .row:last-child
+        {
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            // margin-left: 0;
+            .done
+            {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                // justify-content: center;
+            }
+            .inProgress
+            {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                animation: inProgress 1s ease infinite alternate;
+                // justify-content: center;
+            }
+            @keyframes inProgress {
+                from{
+                    opacity: 0;
+                }
+                to{
+                    opacity: 1;
+                }
+            }
+            .undone
+            {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                opacity:0.3;
+                // justify-content: center;
+            }
+            .undone .checkedIcon,.inProgress .checkedIcon
+            {
+                display: none;
+            }
+        }
+    }
+    .right
+    {
+        flex:1;
+        .wrapper
+        {
+            // height: 150px;
+            width: 90%;
+            background-color: #333;
+            max-height: 300px;
+            color: white;
+            padding: 50px;
+            padding-top: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            // align-items: center;
+            .title
+            {
+                // align-items: center;
+                // padding-left: 130px;
+            }
+            .totalText
+            {
+                margin-top: 20px;
+                // display: flex;
+                // justify-content: center;
+                // padding: 5px;
+                .totalTextTitle
+                {
+                    margin-right: 10px;
+                }
+            }
+            .button
+            {
+               margin-top: 20px;
+                height: 30px;
+                background-color: white;
+                color: teal;
+                // color: #ffffff;
+                font-weight: bold;
+                cursor: not-allowed;
+            }
+        }
+    }
+    
+}

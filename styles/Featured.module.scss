@@ -1,0 +1,45 @@
+
+.container
+{
+    height: calc(100vh - 100px);
+    // height: 100px;
+    // overflow: hidden;
+    background-color: rgb(139, 67, 67);  
+    // overflow: scroll;
+    position: relative;
+    .arrowContainer
+    {
+        position: absolute;
+        width: 10%;
+        height: 20%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        cursor: pointer;
+        z-index: 2;
+    }
+    .wrapper
+    {
+        height: 100%;
+        width: 300vw;
+        display: flex;
+        // background-color: aqua;
+        overflow: auto;
+        transition: all 1.5s ease-in-out;
+        .imgContainer
+        {
+            position: relative;
+            height: 100%;
+            width: 100vw;       
+        }
+    }
+    
+}
+
+@media screen and (max-width:480)
+{
+.container{
+    height: 50vh;
+}
+
+}
